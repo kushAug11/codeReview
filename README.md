@@ -73,10 +73,11 @@ The backend will be running at `http://localhost:5000`
 ```
 
 4. Open your browser at `http://localhost:3000`
-5. Clone the repository:
+   Setup from REPO
+1. Clone the repository:
 
 ```bash
-   git clone https://github.com/your-username/ai-code-reviewer.git
+   git clone https://github.com/kushaug11/codeReview.git
 ```
 
 2. Install dependencies:
