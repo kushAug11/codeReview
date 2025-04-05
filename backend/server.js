@@ -1,6 +1,11 @@
 import { GoogleGenAI } from "@google/genai";
 import express from 'express';
+
+import cors from 'cors';
+
+
 const app=express();
+app.use(cors());
 
 
 app.get('/',(req,res)=>{
@@ -8,7 +13,7 @@ app.get('/',(req,res)=>{
     res.send("hello world");
 });
 
-const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GEMINI_KEY });
+const ai = new GoogleGenAI({ apiKey:""});
 
 async function main(prompt) {
   const response = await ai.models.generateContent({
@@ -91,9 +96,10 @@ async function main(prompt) {
   console.log(response.text);
   return response.text;
 }
+app.use(express.json())
 
 app.post('/ai', async (req,res)=>{
-    const prompt=req.query.prompt;
+    const prompt=req.body.code;
 
 
     if(!prompt){
