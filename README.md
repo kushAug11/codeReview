@@ -57,7 +57,7 @@ The backend will be running at `http://localhost:5000`
 1. Navigate to the root of the project:
 
 ```bash
-   cd ai-code-reviewer
+   cd frontend
 ```
 
 2. Install dependencies:
